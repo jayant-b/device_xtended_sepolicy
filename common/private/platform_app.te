@@ -4,3 +4,6 @@ allow platform_app nfc_service:service_manager find;
 # Allow CPUInfo access to thermal
 allow platform_app sysfs_thermal:dir search;
 allow platform_app sysfs_thermal:file r_file_perms;
+
+# Allow FOD HAL service to be found
+hal_client_domain(platform_app, hal_lineage_fod)
